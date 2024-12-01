@@ -191,3 +191,53 @@ If two keys hash to the same value, the unordered_map uses the equality function
 Explanation:
 * The equality function considers keys equal if they have the same length.
 * "one" and "two" are treated as the same key because their lengths are equal.
+
+
+
+
+
+
+
+
+
+## Capacity Functions
+
+The capacity-related functions in std::unordered_map provide information about the number of elements it contains and its ability to store elements.
+
+> size()
+
+Description: Returns the number of elements currently stored in the unordered_map.
+Syntax:
+        
+    std::size_t size() const noexcept;
+Example-
+
+    umap.size()
+    
+Return Value: The number of elements in the container.
+
+> empty()
+
+Description: Checks whether the unordered_map contains any elements.
+Syntax:
+        
+    bool empty() const noexcept;
+Example-
+
+    if (umap.empty()) {
+        std::cout << "The unordered_map is empty.\n";
+    }
+Return Value:
++ true if the unordered_map is empty (contains 0 elements).
++ false otherwise
+
+> max_size()
+
+Description: Returns the theoretical maximum number of elements the unordered_map can hold based on system and implementation constraints.
+Syntax:
+
+    std::size_t max_size() const noexcept;
+Example-
+
+    umap.max_size()
+Return Value: The maximum number of elements that can be stored in the unordered_map.
